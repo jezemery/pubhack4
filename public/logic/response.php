@@ -5,5 +5,6 @@
 	}
 	if(isset($_GET["answer"])){
 		$questions = file("game/" . $_GET["section"] . "/" . $_GET["answer"] . "/questions.txt");
+		echo $questions[0];
 	}
 ?>
