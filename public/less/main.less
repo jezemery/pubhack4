@@ -1,99 +1,129 @@
+@gray: #c0c0c0;
+@gray-dark: #808080;
+@gray-light: #dfdfdf;
+@blue: #000080;
+
 *, *:before, *:after {
-  -moz-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body{
+.borders() {
+  background: @gray;
+  border: 1px solid;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  box-shadow: inset -1px -1px 0 0 @gray-dark, inset 1px 1px 0 0 #fff;
+  padding: 2px;
+}
+
+.inset-border() {
+  border: 1px solid;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
   background-color: #222;
-  .wrapper{
-	  background-color: #008080; 
-	  position: absolute;
-	  margin: 0px auto;
-	  width: 100%;
-	  min-height: 100%;
-	  box-shadow: 0 0 5px rgba(0,0,0,0.6);
-	  .bar{
-		  position: absolute;
-		  bottom: 0;
-		  height: 30px;
-		  background-color: #C0C0C0;
-		  width: 100%;
-		  border-top: 3px solid #FFFFFF;
-		}
-		.start-button{
-			  display: inline-block;
-			  border-top: 2px solid #fff;
-			  border-left: 2px solid #fff;
-			  border-bottom: 2px solid #000000;
-			  border-right: 2px solid #000000;
-			  height: 25px;
-			  margin-left: 2px;
-			  margin-top: 1px;
-			  font-weight: bold;
-			  padding-left: 2px;
-			  padding-right: 2px;
-			  width: 70px;
-			}
+  .window {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: #000;
+    .borders();
+  }
+  .wrapper {
+    background-color: #008080;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+    .bar {
+      position: absolute;
+      bottom: 0;
+      height: 30px;
+      background-color: #C0C0C0;
+      width: 100%;
+      border-top: 3px solid #FFFFFF;
+    }
+    .start-button {
+      display: inline-block;
+      border: 2px solid #fff;
+      border-right-color: #000000;
+      border-bottom-color: #000000;
+      height: 25px;
+      margin-left: 2px;
+      margin-top: 1px;
+      font-weight: bold;
+      padding-left: 2px;
+      padding-right: 2px;
+      width: 70px;
+    }
 
-			.start-button>span{
-			  position: absolute;
-			  bottom: 3px;
-			}
+    .start-button > span {
+      position: absolute;
+      bottom: 3px;
+    }
 
-			.time{
-			  position: relative;
-			  width: 80px;
-			  border-top: 2px solid #6D6E6B;
-			  border-left: 2px solid #6D6E6B;
-			  border-bottom: 2px solid #ffffff ;
-			  border-right: 2px solid #ffffff;
-			  height: 24px;
-			  float: right;
-			  margin-right: 3px;
-			  margin-top: 1px;
-			}
+    .time {
+      position: relative;
+      width: 80px;
+      border: 2px solid #6D6E6B;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      height: 24px;
+      float: right;
+      margin-right: 3px;
+      margin-top: 1px;
+    }
 
-			.time>span{
-			  font-size: 0.8em;
-			  position: absolute;
-			  bottom: 1px;
-			  margin-left: 10px;
-			}
+    .time > span {
+      font-size: 0.8em;
+      position: absolute;
+      bottom: 1px;
+      margin-left: 10px;
+    }
 
-			.desktop{
-			  color: white;
-			  font-size: 0.8em;
-			}
+    .desktop {
+      color: white;
+      font-size: 0.8em;
+    }
 
-			.icons{
-			  list-style-type: none;
-			  padding: 0;
-			}
+    .icons {
+      list-style-type: none;
+      padding: 0;
+    }
 
-			.icons>li{
-			  display: inline-block;
-			  width: 50px;
-			  margin: 10px;
-			  text-align:center;
-			}
+    .icons > li {
+      display: inline-block;
+      width: 50px;
+      margin: 10px;
+      text-align: center;
+    }
 
-			.icons>li>img{
-			  display: block;
-			  margin-left: auto;
-			  margin-right: auto;
-			  margin-bottom: 3px;
-			  width: 37px;
-			  height: 35px;
-			}
-	}
+    .icons > li > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3px;
+      width: 37px;
+      height: 35px;
+    }
+  }
 }
 
-@media only screen and (max-width: 850px)
-{
-  .wrapper, .bar{
+@media only screen and (max-width: 850px) {
+  .wrapper, .bar {
     width: 100%;
   }
 }
