@@ -88,7 +88,24 @@ $(function () {
             $('#modem')[0].play();
         }, 4000);
     });
-    
+    $(".icons li.notjoe").dblclick(function () {
+        $("body").css("cursor", "url(../img/cursor.png),wait");
+
+        setTimeout(function () {
+            // toggle back after 1 second
+            $("body").css("cursor", "url(../img/cursor-normal.png),wait");
+            $(".window.notjoe").addClass("active");
+        }, 4000);
+    });
+    $(".icons li.ronjeremy").dblclick(function () {
+        $("body").css("cursor", "url(../img/cursor.png),wait");
+
+        setTimeout(function () {
+            // toggle back after 1 second
+            $("body").css("cursor", "url(../img/cursor-normal.png),wait");
+            $(".window.ronjeremy").addClass("active");
+        }, 4000);
+    });
     var currentdate = new Date();
     var hours = new Date().getHours() % 12;
     if (hours == 0) {
@@ -108,7 +125,7 @@ $(function () {
         if($(this).parent().parent().parent().attr('class').indexOf('netscape') > -1){
                 $('#modem')[0].pause();
         }
-        $('.window').removeClass('active');
+        $(this).parent().parent().parent().removeClass('active');
     });
 
      var showText = function (target, message, index, interval) {   
