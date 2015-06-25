@@ -169,9 +169,45 @@ body .wrapper .bsod {
   height: 100%;
   display: block;
   position: absolute;
-  background-color: blue;
+  background-color: #00007f;
   display: none;
-  z-index: 100;
+  z-index: 200;
+}
+body .wrapper .bsod .text-container {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+body .wrapper .bsod .text-container h1 {
+  background-color: #a5a5a6;
+  color: #00007f;
+  padding: 0px 10px;
+  margin: 0px;
+  font-weight: normal;
+  display: block;
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-family: 'FixedsysExcelsior301Regular', cursive;
+}
+body .wrapper .bsod .text-container h2 {
+  color: #FFF;
+  margin: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: 'FixedsysExcelsior301Regular', cursive;
+}
+body .wrapper .bsod .text-container p {
+  color: #FFF;
+  font-size: 16px;
+  font-family: 'FixedsysExcelsior301Regular', cursive;
+}
+body .wrapper .bsod .text-container p.center {
+  margin-top: 50px;
+  text-align: center;
 }
 body .wrapper .bar {
   position: absolute;
