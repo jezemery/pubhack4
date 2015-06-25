@@ -9,10 +9,19 @@ $(function () {
 	}, 120000);
 
 	$(document).keyup(function(e) {
+		if (e.keyCode == 13) {
+	        e.preventDefault();
+	    }
 	     if (e.keyCode == 27) {
 	        location.reload();
 	    }
 	});
+
+	$(".game").submit(function(e){
+		e.preventDefault();
+		$(".content ul").append("<li>" + $(".answer").val() + "</li>");
+		$(".answer").val("");
+	})
 
     $(".icons li").click(function (e) {
         e.preventDefault();
