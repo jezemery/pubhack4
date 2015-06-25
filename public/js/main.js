@@ -2,7 +2,7 @@ $(function () {
 
     setTimeout(function () {
         $(".bootscreen").css("display", "none");
-    }, 3000);
+    }, 6000);
 
 	setTimeout(function(){
 		$(".bsod").css("display", "block");
@@ -50,5 +50,7 @@ $(function () {
         time = 'pm';
     }
     $('.time span').html(hours + ":" + currentdate.getMinutes() + ' ' + time.toUpperCase());
-
+    $('.window .button.close').on('click', function(){
+        $('.window').removeClass('active');
+    })
 });
