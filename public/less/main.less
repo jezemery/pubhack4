@@ -120,22 +120,23 @@ body {
     .icons {
       list-style-type: none;
       padding: 0;
-    }
-
-    .icons > li {
-      display: inline-block;
-      width: 50px;
-      margin: 10px;
-      text-align: center;
-    }
-
-    .icons > li > img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 3px;
-      width: 37px;
-      height: 35px;
+      > li {
+	      display: inline-block;
+	      width: 50px;
+	      margin: 10px;
+	      text-align: center;
+	      &.active {
+	      	background-color: blue;
+	      }
+	      > img {
+		      display: block;
+		      margin-left: auto;
+		      margin-right: auto;
+		      margin-bottom: 3px;
+		      width: 37px;
+		      height: 35px;
+		    }
+	    }
     }
   }
 }
