@@ -2,7 +2,7 @@ $(function () {
 	$(".game1 .section").val(1);
     setTimeout(function () {
         $(".bootscreen").css("display", "none");
-        $('audio')[0].play();
+        $('#boot')[0].play();
     }, 6000);
 
 	setTimeout(function(){
@@ -68,7 +68,16 @@ $(function () {
 
         }, 4000);
     });
+    $(".icons li.notporn").dblclick(function () {
+        $("body").css("cursor", "url(../img/cursor.png),wait");
 
+        setTimeout(function () {
+            // toggle back after 1 second
+            $("body").css("cursor", "url(../img/cursor-normal.png),wait");
+            $(".window.notporn").addClass("active");
+
+        }, 4000);
+    });
     $(".icons li.netscape").dblclick(function () {
         $("body").css("cursor", "url(../img/cursor.png),wait");
 
@@ -76,7 +85,7 @@ $(function () {
             // toggle back after 1 second
             $("body").css("cursor", "url(../img/cursor-normal.png),wait");
             $(".window.netscape").addClass("active");
-
+            $('#modem')[0].play();
         }, 4000);
     });
     
@@ -96,6 +105,9 @@ $(function () {
     $('.time span').html(hours + ":" + minutes + ' ' + time.toUpperCase());
 
     $('.window .button.close').on('click', function(){
+        if($(this).parent().parent().parent().attr('class').indexOf('netscape') > -1){
+                $('#modem')[0].pause();
+        }
         $('.window').removeClass('active');
     });
 

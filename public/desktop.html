@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
 </head>
 <body id="index" class="home desktop">
-<audio>
+<audio id="boot">
     <source src="audio/boot.mp3"/>
+    Your browser isn't invited for super fun audio time.
+</audio>
+<audio id="modem" loop>
+    <source src="audio/modem.mp3"/>
     Your browser isn't invited for super fun audio time.
 </audio>
 <div class="wrapper">
@@ -35,12 +39,30 @@
         </form>
     </div>
     <div class="window netscape">
-        <header class="active">PubHack :: Netscape Navigator <span class="buttons"><span class="button close"> X </span></span>
+        <header class="active">PubHack :: Internet <span class="buttons"><span class="button close"> X </span></span>
         </header>
         <iframe src="http://line-mode.cern.ch/www/hypertext/DataSources/bySubject/Overview.html"
                 scrolling="no"
                 seamless="seamless">
         </iframe>
+    </div>
+    <div class="window notporn">
+        <header class="active">PubHack :: Really Really Not Porn <span class="buttons"><span class="button close"> X </span></span>
+        </header>
+        <div class="contentwhite">
+            <ul class="icons">
+                <li class="ronjeremy">
+                    <img alt="image1" src="img/image.png"/>
+                    <img class="active" alt="" src="img/image-highlight.png"/>
+                    <span>Ron Jeremy</span>
+                </li>
+                <li class="notjoe">
+                    <img alt="image1" src="img/image.png"/>
+                    <img class="active" alt="" src="img/image-highlight.png"/>
+                    <span>Really not Joe</span>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="bsod">
         <div class="text-container">
@@ -77,7 +99,7 @@
                 <img class="active" alt="" src="img/network-active.png"/>
                 <span>My Network</span>
             </li>
-            <li>
+            <li class="notporn">
                 <img alt="" src="img/folder.gif"/>
                 <img class="active" alt="" src="img/folder-active.png"/>
                 <span>Not<br/>porn</span>
