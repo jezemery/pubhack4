@@ -6,7 +6,13 @@ $(function () {
 
 	setTimeout(function(){
 		$(".bsod").css("display", "block");
-	},120000);
+	}, 6000);
+
+	$(document).keyup(function(e) {
+	     if (e.keyCode == 27) {
+	        window.close();
+	    }
+	});
 
     $(".icons li").click(function (e) {
         e.preventDefault();

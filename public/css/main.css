@@ -29,11 +29,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222;
-  font-size: 12px;
-  font-smooth: never;
-  -webkit-font-smoothing: none;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
 }
 body .bootscreen {
   width: 1024px;
@@ -123,6 +118,10 @@ body .window {
   transition: all 0.8s cubic-bezier(0, 1, 0, -1);
   overflow: hidden;
   z-index: 2;
+  font-size: 12px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: Arial, sans-serif;
 }
 body .window.active {
   transform: scale(1);
@@ -163,6 +162,11 @@ body .wrapper {
   margin-top: -384px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   vertical-align: middle;
+  font-family: Tahoma, "Times New Roman", "Bitstream Charter", Times, serif;
+  font-size: 15px;
+  font-smooth: never;
+  font-kerning: normal;
+  -webkit-font-smoothing: none;
 }
 body .wrapper .bsod {
   width: 100%;
@@ -232,11 +236,11 @@ body .wrapper .start-button {
 }
 body .wrapper .start-button > span {
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
 }
 body .wrapper .time {
   position: relative;
-  width: 80px;
+  width: 90px;
   border: 2px solid #6D6E6B;
   border-right-color: #ffffff;
   border-bottom-color: #ffffff;
@@ -248,7 +252,7 @@ body .wrapper .time {
 body .wrapper .time > span {
   font-size: 0.8em;
   position: absolute;
-  bottom: 1px;
+  bottom: 3px;
   margin-left: 10px;
 }
 body .wrapper .desktop {
