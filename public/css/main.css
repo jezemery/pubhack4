@@ -15,18 +15,41 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222;
+  font-size: 12px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: Arial, sans-serif;
 }
 body .window {
-  width: 100%;
-  height: 100%;
-  margin: auto;
+  width: 640px;
+  height: 480px;
   background: #000;
+  position: fixed;
   background: #c0c0c0;
   border: 1px solid;
   border-right-color: #000;
   border-bottom-color: #000;
   box-shadow: inset -1px -1px 0 0 #808080, inset 1px 1px 0 0 #ffffff;
   padding: 2px;
+  top: 50%;
+  left: 50%;
+  margin-top: -240px;
+  margin-left: -320px;
+  transform: scale(0);
+  transition: all 0.8s cubic-bezier(0, 1, 1, 0);
+}
+body .window.active {
+  transform: scale(1);
+}
+body .window header {
+  color: #c0c0c0;
+  background: #808080;
+  padding: 5px 4px;
+  font-weight: bold;
+}
+body .window header.active {
+  background: #000080;
+  color: #fff;
 }
 body .wrapper {
   background-color: #008080;
