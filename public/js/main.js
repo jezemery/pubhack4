@@ -18,7 +18,15 @@ $(function () {
 	    }
 	});
 
-	$(".game1").submit(function(e){
+    var button = $('.button');
+    button.mousedown(function(){
+        $(this).addClass('active')
+    });
+    button.mouseup(function(){
+        $(this).removeClass('active')
+    });
+    
+    $(".game").submit(function(e){
 		e.preventDefault();
 		$(".content").append("<li>" + $(".game1 .answer").val() + "</li>");
 		var answer = $(".game1 .answer").val();
@@ -36,7 +44,7 @@ $(function () {
 		$(".answer").val("");
 		var elem = $('.content');
 		elem.scrollTop = elem.scrollHeight;
-	})
+	});
 
     $(".icons li").click(function (e) {
         e.preventDefault();
