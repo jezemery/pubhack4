@@ -2,7 +2,7 @@ $(function () {
 
     setTimeout(function () {
         $(".bootscreen").css("display", "none");
-    }, 3000);
+    }, 6000);
 
 	setTimeout(function(){
 		$(".bsod").css("display", "block");
@@ -58,11 +58,14 @@ $(function () {
     }
     $('.time span').html(hours + ":" + currentdate.getMinutes() + ' ' + time.toUpperCase());
 
-    var showText = function (target, message, index, interval) {   
+    $('.window .button.close').on('click', function(){
+        $('.window').removeClass('active');
+    });
+
+     var showText = function (target, message, index, interval) {   
 	  if (index < message.length) {
 	    $(target).append(message[index++]);
 	    setTimeout(function () { showText(target, message, index, interval); }, interval);
 	  }
 	}
-
 });
