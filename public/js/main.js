@@ -68,6 +68,17 @@ $(function () {
 
         }, 4000);
     });
+
+    $(".icons li.netscape").dblclick(function () {
+        $("body").css("cursor", "url(../img/cursor.png),wait");
+
+        setTimeout(function () {
+            // toggle back after 1 second
+            $("body").css("cursor", "url(../img/cursor-normal.png),wait");
+            $(".window.netscape").addClass("active");
+
+        }, 4000);
+    });
     
     var currentdate = new Date();
     var hours = new Date().getHours() % 12;
