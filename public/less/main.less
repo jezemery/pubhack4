@@ -47,6 +47,11 @@ body {
     left: 50%;
     margin-top: -240px;
     margin-left: -320px;
+    transform: scale(0);
+    transition: all 0.8s cubic-bezier(0, 1, 1, 0);
+    &.active {
+      transform: scale(1);
+    }
     header {
       color: @gray;
       background: @gray-dark;
