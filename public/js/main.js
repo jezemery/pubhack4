@@ -1,4 +1,13 @@
 $(function () {
+
+	setTimeout(function(){
+		$(".bootscreen").css("display", "none");
+	},3000);
+
+	setTimeout(function(){
+		$(".bsod").css("display", "block");
+	},10000);
+
 	$(".icons li").click(function(e){
 		e.preventDefault();
 		$(".icons li").removeClass("active");

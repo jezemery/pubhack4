@@ -16,8 +16,13 @@
 }
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 1024px;
+  height: 768px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -512px;
+  margin-top: -384px;
 }
 body {
   cursor: url(../img/cursor-normal.png), wait;
@@ -28,6 +33,76 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: none;
   font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+body .bootscreen {
+  width: 1024px;
+  height: 768px;
+  background: url(../img/windows-95-bootscreen.gif);
+  background-size: contain;
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -512px;
+  margin-top: -384px;
+}
+body .bootscreen .loading {
+  background: linear-gradient(270deg, #4d7fb8, #aeb8c1, #4d7fb8);
+  background-size: 300% 300%;
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  -o-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+  height: 25px;
+  width: 1024px;
+  bottom: 0;
+  position: absolute;
+  z-index: 11;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 body .window {
   width: 640px;
@@ -79,12 +154,24 @@ body .window header.active {
 }
 body .wrapper {
   background-color: #008080;
-  position: absolute;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 100%;
+  position: fixed;
+  width: 1024px;
+  min-height: 768px;
+  left: 50%;
+  top: 50%;
+  margin-left: -512px;
+  margin-top: -384px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   vertical-align: middle;
+}
+body .wrapper .bsod {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: blue;
+  display: none;
+  z-index: 100;
 }
 body .wrapper .bar {
   position: absolute;
