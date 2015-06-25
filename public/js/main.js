@@ -2,6 +2,7 @@ $(function () {
 
     setTimeout(function () {
         $(".bootscreen").css("display", "none");
+        $('audio')[0].play();
     }, 6000);
 
 	setTimeout(function(){
@@ -37,7 +38,7 @@ $(function () {
         setTimeout(function () {
             // toggle back after 1 second
             $("body").css("cursor", "url(../img/cursor-normal.png),wait");
-            $(".window").addClass("active");
+            $(".window.game").addClass("active");
         }, 4000);
     });
     var currentdate = new Date();

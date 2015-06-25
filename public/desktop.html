@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
 </head>
 	<body id="index" class="home desktop">
+    <audio>
+        <source src="audio/boot.mp3" />
+        Your browser isn't invited for super fun audio time.
+    </audio>
     <div class="bootscreen">
         <div class="loading"></div>
     </div>
-    <div class="window">
-        <header class="active">PubHack :: Blast from the past <span class="buttons"><span class="button close"> X </span></span></header>
+    <div class="window game">
+        <header class="active">PubHack :: Blast off! <span class="buttons"><span class="button close"> X </span></span></header>
+        <form action="">
+            <label for="na"></label>
+            <div id="na" class="content"><ul></ul></div>
+            <input type="text" class="answer" name="na" id="na">
+        </form>
+    </div>
+    <div class="window browser">
+        <header class="active">PubHack :: Browser <span class="buttons"><span class="button close"> X </span></span></header>
         <form action="">
             <label for="na"></label>
             <div id="na" class="content"><ul></ul></div>
@@ -58,7 +70,7 @@
 		      <li class="game">
 		        <img alt="" src="img/icon.png" />
 		        <img class="active" alt="" src="img/icon-active.png" />
-		        <span>Blast from the past</span>
+		        <span>Blast<br/>off</span>
 		      </li>
 		    </ul>
 		  </div>
