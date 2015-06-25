@@ -21,8 +21,14 @@ $(function () {
 		e.preventDefault();
 		$(".content").append($(".answer").val());
 		$(".answer").val("");
+		// $(".section").val() += 1;
 		var elem = $('.content');
 		elem.scrollTop = elem.scrollHeight;
+		setTimeout(function () {
+            $.get( "logic/response.php?section=" + $(".section").val() + "&answer=" + $(".answer").val(), function( data ) {
+            	showText(".content", data, 0, 100);
+			});
+		}, 2000);
 	})
 
     $(".icons li").click(function (e) {
@@ -47,6 +53,7 @@ $(function () {
 
         }, 4000);
     });
+    
     var currentdate = new Date();
     var hours = new Date().getHours() % 12;
     if (hours == 0) {
