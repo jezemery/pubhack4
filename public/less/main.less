@@ -33,12 +33,30 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222;
+  font-size: 12px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: Arial, sans-serif;
   .window {
-    width: 100%;
-    height: 100%;
-    margin: auto;
+    width: 640px;
+    height: 480px;
     background: #000;
+    position: fixed;
     .borders();
+    top: 50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-left: -320px;
+    header {
+      color: @gray;
+      background: @gray-dark;
+      padding: 5px 4px;
+      font-weight: bold;
+      &.active {
+        background: @blue;
+        color: #fff;
+      }
+    }
   }
   .wrapper {
     background-color: #008080;
