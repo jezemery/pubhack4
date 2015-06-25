@@ -20,9 +20,9 @@ $(function () {
 
 	$(".game").submit(function(e){
 		e.preventDefault();
-		$(".content ul").append("<li>" + $(".answer").val() + "</li>");
+		$(".content").append($(".answer").val());
 		$(".answer").val("");
-		var elem = document.getElementById('.content');
+		var elem = $('.content');
 		elem.scrollTop = elem.scrollHeight;
 	})
 
@@ -39,6 +39,13 @@ $(function () {
             // toggle back after 1 second
             $("body").css("cursor", "url(../img/cursor-normal.png),wait");
             $(".window.game").addClass("active");
+
+            setTimeout(function () {
+	            $.get( "logic/response.php?question=true", function( data ) {
+	            	showText(".content", data, 0, 100);
+				});
+			}, 2000);
+
         }, 4000);
     });
     var currentdate = new Date();
@@ -51,7 +58,15 @@ $(function () {
         time = 'pm';
     }
     $('.time span').html(hours + ":" + currentdate.getMinutes() + ' ' + time.toUpperCase());
+
     $('.window .button.close').on('click', function(){
         $('.window').removeClass('active');
-    })
+    });
+
+     var showText = function (target, message, index, interval) {   
+	  if (index < message.length) {
+	    $(target).append(message[index++]);
+	    setTimeout(function () { showText(target, message, index, interval); }, interval);
+	  }
+	}
 });
