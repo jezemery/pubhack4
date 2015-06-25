@@ -6,7 +6,7 @@ $(function () {
 
 	setTimeout(function(){
 		$(".bsod").css("display", "block");
-	},5000);
+	},120000);
 
 	$(".icons li").click(function(e){
 		e.preventDefault();
