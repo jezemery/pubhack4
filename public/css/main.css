@@ -92,6 +92,9 @@ body .wrapper .icons > li {
   margin: 10px;
   text-align: center;
 }
+body .wrapper .icons > li.active {
+  background-color: blue;
+}
 body .wrapper .icons > li > img {
   display: block;
   margin-left: auto;
