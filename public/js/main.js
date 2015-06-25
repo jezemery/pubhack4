@@ -21,6 +21,8 @@ $(function () {
 		e.preventDefault();
 		$(".content ul").append("<li>" + $(".answer").val() + "</li>");
 		$(".answer").val("");
+		var elem = document.getElementById('.content');
+		elem.scrollTop = elem.scrollHeight;
 	})
 
     $(".icons li").click(function (e) {
