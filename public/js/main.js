@@ -89,7 +89,11 @@ $(function () {
     if (currentdate.getHours() >= 12) {
         time = 'pm';
     }
-    $('.time span').html(hours + ":" + currentdate.getMinutes() + ' ' + time.toUpperCase());
+    var minutes = currentdate.getMinutes();
+    if (minutes < 10) {
+        minutes = '0'+minutes;
+    }
+    $('.time span').html(hours + ":" + minutes + ' ' + time.toUpperCase());
 
     $('.window .button.close').on('click', function(){
         $('.window').removeClass('active');
