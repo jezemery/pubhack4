@@ -1,5 +1,5 @@
 $(function () {
-
+	$(".game1 .section").val(1);
     setTimeout(function () {
         $(".bootscreen").css("display", "none");
         $('audio')[0].play();
@@ -25,9 +25,22 @@ $(function () {
     button.mouseup(function(){
         $(this).removeClass('active')
     });
+    
     $(".game").submit(function(e){
 		e.preventDefault();
-		$(".content").append($(".answer").val());
+		$(".content").append("<li>" + $(".game1 .answer").val() + "</li>");
+		var answer = $(".game1 .answer").val();
+
+		setTimeout(function () {
+            $.get( "logic/response.php?section=" + $(".game1 .section").val() + "&answer=" + answer, function( data ) {
+            	showText(".content", data, 0, 100);
+			});
+
+			$(".game1 .section").val( function(i, oldval) {
+			    return parseInt( oldval, 10) + 1;
+			});
+		}, 2000);
+
 		$(".answer").val("");
 		var elem = $('.content');
 		elem.scrollTop = elem.scrollHeight;
@@ -49,12 +62,13 @@ $(function () {
 
             setTimeout(function () {
 	            $.get( "logic/response.php?question=true", function( data ) {
-	            	showText(".content", data, 0, 100);
+	            	showText(".content", data + "\n", 0, 100);
 				});
 			}, 2000);
 
         }, 4000);
     });
+    
     var currentdate = new Date();
     var hours = new Date().getHours() % 12;
     if (hours == 0) {
