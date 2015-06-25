@@ -5,15 +5,13 @@ $(function () {
 		$(this).toggleClass("active");
 	});
 
-	$( ".icons li" ).dblclick(function() {
-		setTimeout(function(){
-	     // toggle back after 1 second
-	     $("body").css("cursor", "url(../img/cursor.png),wait");
-	   },2000);
+	$( ".icons li.game" ).dblclick(function() {
+	    $("body").css("cursor", "url(../img/cursor.png),wait");
 
 		setTimeout(function(){
 	     // toggle back after 1 second
 	     $("body").css("cursor", "url(../img/cursor-normal.png),wait");
+	     $(".window").addClass("active");
 	   },4000);
 	});
 
