@@ -4,9 +4,9 @@ $(function () {
 		$(".bootscreen").css("display", "none");
 	},3000);
 
-	// setTimeout(function(){
-	// 	$(".bsod").css("display", "block");
-	// },120000);
+	setTimeout(function(){
+		$(".bsod").css("display", "block");
+	},5000);
 
 	$(".icons li").click(function(e){
 		e.preventDefault();

@@ -184,6 +184,7 @@ body .wrapper .bsod .text-container h1 {
   color: #00007f;
   padding: 0px 10px;
   margin: 0px;
+  font-weight: normal;
   display: block;
   width: 100px;
   text-align: center;
