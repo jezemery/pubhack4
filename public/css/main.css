@@ -92,8 +92,14 @@ body .wrapper .icons > li {
   margin: 10px;
   text-align: center;
 }
-body .wrapper .icons > li.active {
-  background-color: blue;
+body .wrapper .icons > li.active img {
+  display: none;
+}
+body .wrapper .icons > li.active img.active {
+  display: block;
+}
+body .wrapper .icons > li.active span {
+  background-color: #00007f;
 }
 body .wrapper .icons > li > img {
   display: block;
@@ -102,6 +108,9 @@ body .wrapper .icons > li > img {
   margin-bottom: 3px;
   width: 37px;
   height: 35px;
+}
+body .wrapper .icons > li > img.active {
+  display: none;
 }
 @media only screen and (max-width: 850px) {
   .wrapper,
