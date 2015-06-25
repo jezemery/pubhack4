@@ -6,11 +6,11 @@ $(function () {
 
 	setTimeout(function(){
 		$(".bsod").css("display", "block");
-	}, 6000);
+	}, 120000);
 
 	$(document).keyup(function(e) {
 	     if (e.keyCode == 27) {
-	        window.close();
+	        location.reload();
 	    }
 	});
 
