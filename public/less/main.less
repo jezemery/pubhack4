@@ -51,11 +51,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222;
-  font-size: 12px;
-  font-smooth: never;
-  -webkit-font-smoothing: none;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+//  overflow: hidden;
   .bsod {
 
   }
@@ -144,6 +140,10 @@ body {
     transition: all 0.8s cubic-bezier(0, 1, 0, -1);
     overflow: hidden;
     z-index: 2;
+    font-size: 12px;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-family: Arial, sans-serif;
     &.active {
       transform: scale(1);
     }
@@ -184,6 +184,11 @@ body {
     margin-top: -384px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     vertical-align: middle;
+    font-family: Tahoma, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 15px;
+    font-smooth: never;
+    font-kerning: normal;
+    -webkit-font-smoothing: none;
     .bsod {
     	width: 100%;
     	height: 100%;
@@ -217,12 +222,12 @@ body {
 
     .start-button > span {
       position: absolute;
-      bottom: 3px;
+      bottom: 5px;
     }
 
     .time {
       position: relative;
-      width: 80px;
+      width: 90px;
       border: 2px solid #6D6E6B;
       border-right-color: #ffffff;
       border-bottom-color: #ffffff;
@@ -235,7 +240,7 @@ body {
     .time > span {
       font-size: 0.8em;
       position: absolute;
-      bottom: 1px;
+      bottom: 3px;
       margin-left: 10px;
     }
 
