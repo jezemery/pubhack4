@@ -126,7 +126,15 @@ body {
 	      margin: 10px;
 	      text-align: center;
 	      &.active {
-	      	background-color: blue;
+	      	img {
+	      		display: none;
+	      		&.active {
+	      			display: block;
+	      		}
+	      	}
+	      	span {
+	      		background-color: #00007f;
+	      	}
 	      }
 	      > img {
 		      display: block;
@@ -135,6 +143,9 @@ body {
 		      margin-bottom: 3px;
 		      width: 37px;
 		      height: 35px;
+		      &.active {
+      			display: none;
+      		}
 		    }
 	    }
     }
